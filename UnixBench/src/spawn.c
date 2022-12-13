@@ -50,9 +50,9 @@ char	*argv[];
 	duration = atoi(argv[1]);
 
 	iter = 0;
-	wake_me(duration, report);
+	//wake_me(duration, report);
 
-	while (1) {
+	while (iter < (unsigned long)duration) {
 		if ((slave = fork()) == 0) {
 			/* slave .. boring */
 #if debug
@@ -76,5 +76,7 @@ char	*argv[];
 #if debug
 		printf("Child %d done.\n", slave);
 #endif
-		}
+	}
+
+	report();
 }
