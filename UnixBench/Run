@@ -265,7 +265,7 @@ my $testParams = {
     "spawn" => {
         "logmsg" => "Process Creation",
         "cat"    => 'system',
-        "options" => "30",
+        "options" => "90",
     },
     "execl" => {
         "logmsg" => "Execl Throughput",
