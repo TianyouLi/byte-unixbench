@@ -99,7 +99,7 @@ else
     else ifeq ($(ARCH),riscv64)
         OPTON += -march=rv64g -mabi=lp64d
     else
-        OPTON += -march=native -mtune=native
+        OPTON += -march=native -mtune=native -funroll-loops --param max-unroll-times=4 -fvariable-expansion-in-unroller --param max-variable-expansions-in-unroller=4
     endif
   endif
 
